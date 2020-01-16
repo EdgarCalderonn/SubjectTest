@@ -19,7 +19,7 @@ public class Name {
 			
 			this.name = value;
 			
-			if ( !value.matches("[A-Z]"))
+			if ( !value.matches("[A-Z].*") )
 				throw new NameException();	
 		}
 		

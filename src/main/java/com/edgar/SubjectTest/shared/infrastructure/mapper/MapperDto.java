@@ -10,11 +10,11 @@ public interface MapperDto<I, O> {
 	public O dtoDom(I i);
 
 	public default List<I> listDomDto(List<O> list) {
-		return list.stream().map(o -> this.domDto(o)).collect(Collectors.toList());
+		return list.stream().map(o -> domDto(o)).collect(Collectors.toList());
 	}
 
 	public default List<O> listDtoDom(List<I> list) {
-		return list.stream().map(this::dtoDom).collect(Collectors.toList());
+		return list.stream().map(i -> dtoDom(i)).collect(Collectors.toList());
 	}
 
 }

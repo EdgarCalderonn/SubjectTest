@@ -16,7 +16,7 @@ public class Code {
 		{
 			this.code = value;
 				
-			if (value.length() > 5 || value.length() > 10)
+			if (value.length() < 4 || value.length() > 10)
 				throw new CodeException();
 
 			
